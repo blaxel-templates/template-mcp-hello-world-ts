@@ -1,3 +1,3 @@
-name = "{{.ProjectName}}"
-workspace = "{{.Workspace}}"
+name = "mcp-helloworld"
+workspace = ""
 type = "function"

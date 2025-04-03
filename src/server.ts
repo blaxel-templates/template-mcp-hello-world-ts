@@ -4,22 +4,22 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { z } from "zod";
 
 const server = new McpServer({
-  name: "{{.ProjectName}}",
+  name: "mcp-helloworld",
   version: "1.0.0",
-  description: ""
+  description: "",
 });
 
 server.tool(
   "hello_world",
   "Say hello to a person",
   {
-    firstname: z.string()
+    firstname: z.string(),
   },
-  async ({firstname}) => {
+  async ({ firstname }) => {
     logger.info(`Hello world called`);
     return {
-      content: [{ type: "text", text: `Hello ${firstname}` }]
-    }
+      content: [{ type: "text", text: `Hello ${firstname}` }],
+    };
   }
 );
 
