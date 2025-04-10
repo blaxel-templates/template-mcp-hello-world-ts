@@ -8,7 +8,7 @@
     "prod": "node dist/server.js",
     "build": "tsc",
     "dev": "tsx watch src/server.ts",
-    "test": "tsx src/client.ts"
+    "inspect": "npx @modelcontextprotocol/inspector tsx src/server.ts"
   },
   "dependencies": {
     "@blaxel/sdk": "0.1.3",
