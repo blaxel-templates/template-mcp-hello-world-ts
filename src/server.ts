@@ -1,4 +1,4 @@
-import { BlaxelMcpServerTransport, logger } from "@blaxel/sdk";
+import { BlaxelMcpServerTransport, env, logger } from "@blaxel/sdk";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
@@ -25,7 +25,7 @@ server.tool(
 
 function main() {
   let transport;
-  if (process.env.BL_SERVER_PORT) {
+  if (env.BL_SERVER_PORT) {
     transport = new BlaxelMcpServerTransport();
   } else {
     transport = new StdioServerTransport();
