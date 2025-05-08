@@ -1,4 +1,5 @@
-import { BlaxelMcpServerTransport, env, logger } from "@blaxel/sdk";
+import { BlaxelMcpServerTransport, env } from "@blaxel/core";
+import "@blaxel/telemetry";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
@@ -16,7 +17,7 @@ server.tool(
     firstname: z.string(),
   },
   async ({ firstname }) => {
-    logger.info(`Hello world called`);
+    console.info(`Hello world called`);
     return {
       content: [{ type: "text", text: `Hello ${firstname}` }],
     };
@@ -31,7 +32,7 @@ function main() {
     transport = new StdioServerTransport();
   }
   server.connect(transport);
-  logger.info("Server started");
+  console.info("Server started");
 }
 
 main();
