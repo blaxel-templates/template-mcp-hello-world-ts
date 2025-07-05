@@ -11,8 +11,8 @@
     "inspect": "npx @modelcontextprotocol/inspector tsx src/server.ts"
   },
   "dependencies": {
-    "@blaxel/core": "0.2.19",
-    "@blaxel/telemetry": "0.2.19",
+    "@blaxel/core": "0.2.20",
+    "@blaxel/telemetry": "0.2.20",
     "@modelcontextprotocol/sdk": "^1.11.0",
     "uuid": "^11.1.0",
     "ws": "^8.18.2",
